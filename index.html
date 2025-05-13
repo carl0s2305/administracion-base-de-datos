@@ -2,16 +2,19 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Admin DB</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Administración de Personas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Administración de Base de Datos</h1>
+  <h1>Administración de Personas</h1>
 
   <form id="formulario">
-    <input type="text" id="nombre" placeholder="Nombre">
-    <input type="email" id="correo" placeholder="Correo">
-    <input type="number" id="edad" placeholder="Edad">
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="text" id="apellido_paterno" placeholder="Apellido Paterno" required>
+    <input type="text" id="apellido_materno" placeholder="Apellido Materno">
+    <input type="number" id="edad" placeholder="Edad" min="0" required>
+    <input type="date" id="fecha_nacimiento" required>
+    <input type="email" id="correo" placeholder="Correo" required>
     <button type="button" onclick="insertar()">Insertar</button>
   </form>
 
@@ -19,8 +22,11 @@
     <thead>
       <tr>
         <th>Nombre</th>
-        <th>Correo</th>
+        <th>Apellido Paterno</th>
+        <th>Apellido Materno</th>
         <th>Edad</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Correo</th>
         <th>Acciones</th>
       </tr>
     </thead>
